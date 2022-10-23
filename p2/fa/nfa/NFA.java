@@ -103,8 +103,6 @@ public class NFA implements NFAInterface{
 
 		Set<Set<NFAState>> addedStates = new HashSet<Set<NFAState>>();
 
-		dfa.addStartState(eClosure(q0).toString());
-
 		Queue<Set<NFAState>> queue = new LinkedList<Set<NFAState>>();
 		queue.add(eClosure(q0));
 
@@ -153,6 +151,7 @@ public class NFA implements NFAInterface{
 		return ret;
 	}
 
+    
 	/**
 	 * A helper method to perform recursive DFS search from a given state.
 	 * 
@@ -173,6 +172,8 @@ public class NFA implements NFAInterface{
 
 		return ret;
 	}
+
+    
 
     // Helper methods
     /**
@@ -214,13 +215,13 @@ public class NFA implements NFAInterface{
      * @return
      */
     private Set<NFAState> getToState(Set<NFAState> from, char onSymb) {
-		Set<NFAState> ret = new HashSet<NFAState>();
+		Set<NFAState> state = new HashSet<NFAState>();
 
-		for (NFAState nfaState : from) {
-			ret.addAll(nfaState.getTo(onSymb));
+		for (NFAState s : from) {
+			state.addAll(s.getTo(onSymb));
 		}
 
-		return ret;
+		return state;
 	}
 
     /**
