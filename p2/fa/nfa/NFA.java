@@ -10,8 +10,6 @@ public class NFA implements NFAInterface{
     private LinkedHashSet <NFAState> Q;             // finite set of states
     private LinkedHashSet <Character> sigma;        // finite alphabet
     private NFAState q0;                            // start state        
-    //private HashMap<String, Set<NFAState>> delta;   // transitions
-    //private static char EMPTY = 'e';                // variable for empty string
 
     /** 
      * Constructor for NFA Class. Instantiates
@@ -20,7 +18,6 @@ public class NFA implements NFAInterface{
         this.Q = new LinkedHashSet<>();
         this.sigma = new LinkedHashSet<>();
         this.q0 = null;
-      //  this.delta = new HashMap<>();
     }
 
 
