@@ -6,13 +6,13 @@ import fa.dfa.DFA;
 
 public class NFA implements NFAInterface{
 
-    // NFA 5-tuple instance variables
+    // NFA instance variables
     private LinkedHashSet <NFAState> Q;             // finite set of states
     private LinkedHashSet <Character> sigma;        // finite alphabet
     private NFAState q0;                            // start state        
 
     /** 
-     * Constructor for NFA Class. Instantiates
+     * Constructor for NFA Class. Instantiates instance variables
      */
     public NFA(){
         this.Q = new LinkedHashSet<>();
